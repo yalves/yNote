@@ -5,11 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using YanAlves.yNote.Domain.Entities;
 using YanAlves.yNote.Domain.Interfaces.Repositories;
+using YanAlves.yNote.Domain.Interfaces.Services;
 using YanAlves.yNote.Domain.Services.Base;
 
 namespace YanAlves.yNote.Domain.Services
 {
-    public class CategoriaService : ServiceBase<Categoria>
+    public class CategoriaService : ServiceBase<Categoria>, ICategoriaService
     {
         private readonly ICategoriaRepository _categoriaRepository;
 

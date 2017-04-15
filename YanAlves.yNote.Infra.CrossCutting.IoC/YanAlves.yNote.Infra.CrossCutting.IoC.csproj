@@ -84,6 +84,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\YanAlves.yNote.Application\YanAlves.yNote.Application.csproj">
+      <Project>{7C4A1AB7-2687-4CA7-B2F6-B5A86D8AA3FC}</Project>
+      <Name>YanAlves.yNote.Application</Name>
+    </ProjectReference>
     <ProjectReference Include="..\YanAlves.yNote.Domain\YanAlves.yNote.Domain.csproj">
       <Project>{c115aa13-45ee-423c-90a7-c3fd9b1b9c96}</Project>
       <Name>YanAlves.yNote.Domain</Name>

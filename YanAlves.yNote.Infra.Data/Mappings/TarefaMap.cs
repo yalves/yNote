@@ -19,7 +19,7 @@ namespace YanAlves.yNote.Infra.Data.Mappings
             Property(u => u.UsuarioId)
                 .IsRequired();
 
-            ToTable("Categorias");
+            ToTable("Tarefas");
         }
     }
 }

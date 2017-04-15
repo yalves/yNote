@@ -7,7 +7,7 @@ namespace YanAlves.yNote.Infra.Data.Mappings
     {
         public TagMap()
         {
-            ToTable("Categorias");
+            ToTable("Tags");
 
             HasKey(u => u.TagId);
 

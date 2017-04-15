@@ -183,6 +183,9 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\CategoriasController.cs" />
+    <Compile Include="Controllers\TagsController.cs" />
+    <Compile Include="Controllers\TarefasController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -242,6 +245,21 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Usuarios\Details.cshtml" />
     <Content Include="Views\Usuarios\Index.cshtml" />
+    <Content Include="Views\Categorias\Index.cshtml" />
+    <Content Include="Views\Categorias\Details.cshtml" />
+    <Content Include="Views\Categorias\Create.cshtml" />
+    <Content Include="Views\Categorias\Edit.cshtml" />
+    <Content Include="Views\Categorias\Delete.cshtml" />
+    <Content Include="Views\Tags\Index.cshtml" />
+    <Content Include="Views\Tags\Details.cshtml" />
+    <Content Include="Views\Tags\Create.cshtml" />
+    <Content Include="Views\Tags\Edit.cshtml" />
+    <Content Include="Views\Tags\Delete.cshtml" />
+    <Content Include="Views\Tarefas\Index.cshtml" />
+    <Content Include="Views\Tarefas\Details.cshtml" />
+    <Content Include="Views\Tarefas\Create.cshtml" />
+    <Content Include="Views\Tarefas\Edit.cshtml" />
+    <Content Include="Views\Tarefas\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -260,6 +278,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\YanAlves.yNote.Application\YanAlves.yNote.Application.csproj">
+      <Project>{7C4A1AB7-2687-4CA7-B2F6-B5A86D8AA3FC}</Project>
+      <Name>YanAlves.yNote.Application</Name>
+    </ProjectReference>
     <ProjectReference Include="..\YanAlves.yNote.Domain\YanAlves.yNote.Domain.csproj">
       <Project>{c115aa13-45ee-423c-90a7-c3fd9b1b9c96}</Project>
       <Name>YanAlves.yNote.Domain</Name>

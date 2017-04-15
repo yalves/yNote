@@ -75,3 +75,7 @@ C:\Code\yNote\YanAlves.yNote.Presentation.WebMVC\bin\YanAlves.yNote.Infra.CrossC
 C:\Code\yNote\YanAlves.yNote.Presentation.WebMVC\bin\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity.dll.config
 C:\Code\yNote\YanAlves.yNote.Presentation.WebMVC\bin\YanAlves.yNote.Infra.Data.pdb
 C:\Code\yNote\YanAlves.yNote.Presentation.WebMVC\bin\YanAlves.yNote.Infra.Data.dll.config
+C:\Code\yNote\YanAlves.yNote.Presentation.WebMVC\bin\YanAlves.yNote.Application.dll
+C:\Code\yNote\YanAlves.yNote.Presentation.WebMVC\bin\AutoMapper.dll
+C:\Code\yNote\YanAlves.yNote.Presentation.WebMVC\bin\YanAlves.yNote.Application.pdb
+C:\Code\yNote\YanAlves.yNote.Presentation.WebMVC\bin\AutoMapper.xml

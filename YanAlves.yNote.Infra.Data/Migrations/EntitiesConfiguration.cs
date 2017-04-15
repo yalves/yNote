@@ -5,14 +5,14 @@ namespace YanAlves.yNote.Infra.Data.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<YanAlves.yNote.Infra.Data.Contexts.IdentityEntityContextDb>
+    internal sealed class EntitiesConfiguration : DbMigrationsConfiguration<YanAlves.yNote.Infra.Data.Contexts.yNoteEntitiesDb>
     {
-        public Configuration()
+        public EntitiesConfiguration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(YanAlves.yNote.Infra.Data.Contexts.IdentityEntityContextDb context)
+        protected override void Seed(YanAlves.yNote.Infra.Data.Contexts.yNoteEntitiesDb context)
         {
             //  This method will be called after migrating to the latest version.
 
