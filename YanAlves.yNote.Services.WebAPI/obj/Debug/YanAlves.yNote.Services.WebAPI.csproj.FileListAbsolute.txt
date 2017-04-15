@@ -1,0 +1,5 @@
+C:\Code\yNote\YanAlves.yNote.Services.WebAPI\bin\Debug\YanAlves.yNote.Services.WebAPI.dll
+C:\Code\yNote\YanAlves.yNote.Services.WebAPI\bin\Debug\YanAlves.yNote.Services.WebAPI.pdb
+C:\Code\yNote\YanAlves.yNote.Services.WebAPI\obj\Debug\YanAlves.yNote.Services.WebAPI.csprojResolveAssemblyReference.cache
+C:\Code\yNote\YanAlves.yNote.Services.WebAPI\obj\Debug\YanAlves.yNote.Services.WebAPI.dll
+C:\Code\yNote\YanAlves.yNote.Services.WebAPI\obj\Debug\YanAlves.yNote.Services.WebAPI.pdb

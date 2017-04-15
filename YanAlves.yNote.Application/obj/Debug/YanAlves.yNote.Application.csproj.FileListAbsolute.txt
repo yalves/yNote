@@ -1,0 +1,9 @@
+C:\Code\yNote\YanAlves.yNote.Application\bin\Debug\YanAlves.yNote.Application.dll
+C:\Code\yNote\YanAlves.yNote.Application\bin\Debug\YanAlves.yNote.Application.pdb
+C:\Code\yNote\YanAlves.yNote.Application\bin\Debug\AutoMapper.dll
+C:\Code\yNote\YanAlves.yNote.Application\bin\Debug\YanAlves.yNote.Domain.dll
+C:\Code\yNote\YanAlves.yNote.Application\bin\Debug\YanAlves.yNote.Domain.pdb
+C:\Code\yNote\YanAlves.yNote.Application\bin\Debug\AutoMapper.xml
+C:\Code\yNote\YanAlves.yNote.Application\obj\Debug\YanAlves.yNote.Application.csprojResolveAssemblyReference.cache
+C:\Code\yNote\YanAlves.yNote.Application\obj\Debug\YanAlves.yNote.Application.dll
+C:\Code\yNote\YanAlves.yNote.Application\obj\Debug\YanAlves.yNote.Application.pdb
