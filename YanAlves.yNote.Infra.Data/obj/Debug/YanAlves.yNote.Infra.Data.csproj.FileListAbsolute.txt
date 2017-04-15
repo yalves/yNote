@@ -1,0 +1,12 @@
+C:\Code\yNote\YanAlves.yNote.Infra.Data\bin\Debug\YanAlves.yNote.Infra.Data.dll.config
+C:\Code\yNote\YanAlves.yNote.Infra.Data\bin\Debug\YanAlves.yNote.Infra.Data.dll
+C:\Code\yNote\YanAlves.yNote.Infra.Data\bin\Debug\YanAlves.yNote.Infra.Data.pdb
+C:\Code\yNote\YanAlves.yNote.Infra.Data\bin\Debug\EntityFramework.dll
+C:\Code\yNote\YanAlves.yNote.Infra.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Code\yNote\YanAlves.yNote.Infra.Data\bin\Debug\YanAlves.yNote.Domain.dll
+C:\Code\yNote\YanAlves.yNote.Infra.Data\bin\Debug\YanAlves.yNote.Domain.pdb
+C:\Code\yNote\YanAlves.yNote.Infra.Data\bin\Debug\EntityFramework.xml
+C:\Code\yNote\YanAlves.yNote.Infra.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Code\yNote\YanAlves.yNote.Infra.Data\obj\Debug\YanAlves.yNote.Infra.Data.csprojResolveAssemblyReference.cache
+C:\Code\yNote\YanAlves.yNote.Infra.Data\obj\Debug\YanAlves.yNote.Infra.Data.dll
+C:\Code\yNote\YanAlves.yNote.Infra.Data\obj\Debug\YanAlves.yNote.Infra.Data.pdb
