@@ -17,11 +17,11 @@ namespace YanAlves.yNote.Application.AutoMapper
             CreateMap<CategoriaViewModel, Categoria>();
 
             CreateMap<Tarefa, TarefaViewModel>()
-                .ForMember(p => p.TagIds, dest => dest.MapFrom(x => x.Tags.Select(t => t.TagId).ToList()));
+                .ForMember(p => p.TagIds, dest => dest.MapFrom(x => x.Tags.Select(t => t.TagId).ToList()))
+                .ForMember(p => p.CategoriaId, dest => dest.MapFrom(x => x.Categoria.CategoriaId));
 
 
             CreateMap<TarefaViewModel, Tarefa>()
-                .ForMember(p => p.Categoria, dest => dest.Ignore())
                 .ForMember(p => p.Tags, dest => dest.MapFrom(src => src.Tags));
 
             CreateMap<Tag, TagViewModel>();

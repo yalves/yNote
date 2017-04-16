@@ -18,7 +18,7 @@ namespace YanAlves.yNote.Infra.Data.Repositories.Base
             this._dbContext = context;
         }
 
-        public IEnumerable<TEntity> ObterTodos()
+        public virtual IEnumerable<TEntity> ObterTodos()
         {
             return _dbContext.Set<TEntity>().ToList();
         }

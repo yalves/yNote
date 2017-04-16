@@ -38,6 +38,8 @@ namespace YanAlves.yNote.Application.ViewModels
         [Display(Name = "Categoria")]
         public Guid CategoriaId { get; set; }
 
+        public Categoria Categoria { get; set; }
+
         [Required(ErrorMessage = "Escolha ao menos uma tag para a tarefa")]
         public ICollection<Guid> TagIds { get; set; }
 

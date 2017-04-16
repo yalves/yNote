@@ -53,5 +53,17 @@ namespace YanAlves.yNote.Infra.Data.Repositories
         {
             return this._context.Tarefas.Where(x => x.Tags.Where(t => t.TagId == tagId).Any() && x.Categoria.CategoriaId == categoriaId);
         }
+
+        public override IEnumerable<Tarefa> ObterTodos()
+        {
+            var tarefas = this._context.Tarefas;
+
+            foreach (var tarefa in tarefas)
+            {
+                _context.Entry(tarefa).Collection(t => t.Tags).Load();
+            }
+
+            return tarefas;
+        }
     }
 }
