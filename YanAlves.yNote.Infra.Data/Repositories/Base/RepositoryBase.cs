@@ -23,14 +23,13 @@ namespace YanAlves.yNote.Infra.Data.Repositories.Base
             return _dbContext.Set<TEntity>().ToList();
         }
 
-        public TEntity ObterPorId(Guid? id)
+        public virtual TEntity ObterPorId(Guid? id)
         {
             return _dbContext.Set<TEntity>().Find(id);
         }
 
         public virtual void Alterar(TEntity entidade)
         {
-            if (entidade == null) throw new ArgumentNullException("Entidade é nula");
             _dbContext.Set<TEntity>().Attach(entidade);
             _dbContext.Entry(entidade).State = EntityState.Modified;
             _dbContext.SaveChanges();
@@ -38,7 +37,6 @@ namespace YanAlves.yNote.Infra.Data.Repositories.Base
 
         public void Remover(TEntity entidade)
         {
-            if (entidade == null) throw new ArgumentNullException("Entidade é nula");
             _dbContext.Set<TEntity>().Attach(entidade);
             _dbContext.Set<TEntity>().Remove(entidade);
             _dbContext.SaveChanges();
@@ -56,7 +54,6 @@ namespace YanAlves.yNote.Infra.Data.Repositories.Base
 
         public virtual void Adicionar(TEntity entidade)
         {
-            if (entidade == null) throw new ArgumentNullException("Entidade é nula");
             _dbContext.Set<TEntity>().Add(entidade);
             _dbContext.SaveChanges();
         }

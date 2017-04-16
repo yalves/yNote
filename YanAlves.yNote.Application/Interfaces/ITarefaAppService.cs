@@ -21,5 +21,7 @@ namespace YanAlves.yNote.Application.Interfaces
         void Remover(TarefaViewModel Tarefa);
 
         void Remover(Guid id);
+
+        IEnumerable<TarefaViewModel> ObterPorTagECategoria(Guid tagId, Guid categoriaId);
     }
 }

@@ -12,11 +12,11 @@ namespace YanAlves.yNote.Domain.Interfaces.Repositories.Base
 
         TEntity ObterPorId(Guid? id);
 
-        void Adicionar(TEntity autor);
+        void Adicionar(TEntity entidade);
 
-        void Alterar(TEntity autor);
+        void Alterar(TEntity entidade);
 
-        void Remover(TEntity autor);
+        void Remover(TEntity entidade);
 
         void Remover(Guid id);
 

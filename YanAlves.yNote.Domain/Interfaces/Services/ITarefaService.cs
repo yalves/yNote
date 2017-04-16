@@ -10,5 +10,6 @@ namespace YanAlves.yNote.Domain.Interfaces.Services
 {
     public interface ITarefaService : IServiceBase<Tarefa>
     {
+        IEnumerable<Tarefa> ObterPorTagECategoria(Guid tagId, Guid categoriaId);
     }
 }

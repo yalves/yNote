@@ -40,7 +40,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YanAlves.yNote.Infra.CrossC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YanAlves.yNote.Infra.CrossCutting.IoC", "YanAlves.yNote.Infra.CrossCutting.IoC\YanAlves.yNote.Infra.CrossCutting.IoC.csproj", "{7A11279E-4521-4F87-B641-03A7B1897012}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YanAlves.yNote.Services.WebAPI", "YanAlves.yNote.Services.WebAPI\YanAlves.yNote.Services.WebAPI.csproj", "{31CEBF05-51B6-4FDA-B15C-B7CCBE257536}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YanAlves.yNote.Services.WebAPI", "YanAlves.yNote.Services.WebAPI\YanAlves.yNote.Services.WebAPI.csproj", "{36DC702F-F97D-4D97-880B-B036436BF123}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -72,10 +72,10 @@ Global
 		{7A11279E-4521-4F87-B641-03A7B1897012}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A11279E-4521-4F87-B641-03A7B1897012}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A11279E-4521-4F87-B641-03A7B1897012}.Release|Any CPU.Build.0 = Release|Any CPU
-		{31CEBF05-51B6-4FDA-B15C-B7CCBE257536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{31CEBF05-51B6-4FDA-B15C-B7CCBE257536}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{31CEBF05-51B6-4FDA-B15C-B7CCBE257536}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{31CEBF05-51B6-4FDA-B15C-B7CCBE257536}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36DC702F-F97D-4D97-880B-B036436BF123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36DC702F-F97D-4D97-880B-B036436BF123}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36DC702F-F97D-4D97-880B-B036436BF123}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36DC702F-F97D-4D97-880B-B036436BF123}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,6 +96,6 @@ Global
 		{4838B2D3-B3BA-4D3F-B9D4-CD066C0F5FF5} = {3D901C3C-64FB-4562-A1A2-1B2292136BED}
 		{7B13C05B-A4E1-41FB-96FE-1FCE579EB81F} = {95491F2B-656A-4814-8F61-8079E227B502}
 		{7A11279E-4521-4F87-B641-03A7B1897012} = {6275C6CD-F66B-4E5F-A3DE-6F7E1693FAAF}
-		{31CEBF05-51B6-4FDA-B15C-B7CCBE257536} = {EC44399A-8D61-4EA4-83AF-81C1A5C888ED}
+		{36DC702F-F97D-4D97-880B-B036436BF123} = {EC44399A-8D61-4EA4-83AF-81C1A5C888ED}
 	EndGlobalSection
 EndGlobal

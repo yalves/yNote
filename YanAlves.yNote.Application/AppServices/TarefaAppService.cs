@@ -53,9 +53,20 @@ namespace YanAlves.yNote.Application.AppServices
 
         public TarefaViewModel Alterar(TarefaViewModel model)
         {
-            var Tarefa = Mapper.Map<Tarefa>(model);
+            var tarefa = Mapper.Map<Tarefa>(model);
+            tarefa.Tags = new List<Tag>();
 
-            this._tarefaService.Alterar(Tarefa);
+            if (model.TagIds != null)
+            {
+                model.Tags = new List<TagViewModel>();
+
+                foreach (Guid tagId in model.TagIds)
+                {
+                    tarefa.Tags.Add(this._tagService.ObterPorId(tagId));
+                }
+            }
+
+            this._tarefaService.Alterar(tarefa);
 
             return model;
         }
@@ -69,6 +80,11 @@ namespace YanAlves.yNote.Application.AppServices
         {
             var Tarefa = Mapper.Map<Tarefa>(model);
             this._tarefaService.Remover(Tarefa);
+        }
+
+        public IEnumerable<TarefaViewModel> ObterPorTagECategoria(Guid tagId, Guid categoriaId)
+        {
+            return Mapper.Map<IEnumerable<TarefaViewModel>>(this._tarefaService.ObterPorTagECategoria(tagId, categoriaId));
         }
 
         public void Dispose()

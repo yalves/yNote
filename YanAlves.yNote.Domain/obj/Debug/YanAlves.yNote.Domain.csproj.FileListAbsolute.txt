@@ -1,5 +1,4 @@
 C:\Code\yNote\YanAlves.yNote.Domain\bin\Debug\YanAlves.yNote.Domain.dll
 C:\Code\yNote\YanAlves.yNote.Domain\bin\Debug\YanAlves.yNote.Domain.pdb
-C:\Code\yNote\YanAlves.yNote.Domain\obj\Debug\YanAlves.yNote.Domain.csprojResolveAssemblyReference.cache
 C:\Code\yNote\YanAlves.yNote.Domain\obj\Debug\YanAlves.yNote.Domain.dll
 C:\Code\yNote\YanAlves.yNote.Domain\obj\Debug\YanAlves.yNote.Domain.pdb

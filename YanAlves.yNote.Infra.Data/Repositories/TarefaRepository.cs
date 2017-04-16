@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using YanAlves.yNote.Domain.Entities;
 using YanAlves.yNote.Domain.Interfaces.Repositories;
@@ -17,21 +18,40 @@ namespace YanAlves.yNote.Infra.Data.Repositories
             this._context = context;
         }
 
-        //public override void Adicionar(Tarefa tarefa)
-        //{
-        //    if (tarefa == null) throw new ArgumentNullException("Entidade é nula");
-            
-        //    foreach (var tag in tarefa.Tags)
-        //    {
-        //        Tag dbTag = new Tag();
-        //        dbTag.TagId = tag.TagId;
+        public override Tarefa ObterPorId(Guid? id)
+        {
+            var tarefa = _context.Tarefas.Where(x => x.TarefaId == id).FirstOrDefault();
 
-        //        _context.Tags.Attach(dbTag);
-        //        _context.Tags.Add(dbTag);
-        //    }
+            _context.Entry(tarefa).Collection(t => t.Tags).Load();
 
-        //    _context.Set<Tarefa>().Add(tarefa);
-        //    _context.SaveChanges();
-        //}
+            return tarefa;
+        }
+
+        public override void Alterar(Tarefa tarefa)
+        {
+            var tarefaRecuperada = _context.Tarefas.Where(x => x.TarefaId == tarefa.TarefaId).FirstOrDefault();
+            _context.Entry(tarefaRecuperada).Collection(t => t.Tags).Load();
+
+            var tagsDeletadas = tarefaRecuperada.Tags.Except(tarefa.Tags).ToList<Tag>();
+
+            var tagsAdicionadas = tarefa.Tags.Except(tarefaRecuperada.Tags).ToList<Tag>();
+
+            tagsDeletadas.ForEach(t => tarefaRecuperada.Tags.Remove(t));
+
+            foreach (Tag tag in tagsAdicionadas)
+            {
+                if (_context.Entry(tag).State == EntityState.Detached)
+                    _context.Tags.Attach(tag);
+
+                tarefaRecuperada.Tags.Add(tag);
+            }
+
+            _context.SaveChanges();
+        }
+
+        public IEnumerable<Tarefa> ObterPorTagECategoria(Guid tagId, Guid categoriaId)
+        {
+            return this._context.Tarefas.Where(x => x.Tags.Where(t => t.TagId == tagId).Any() && x.Categoria.CategoriaId == categoriaId);
+        }
     }
 }

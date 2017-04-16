@@ -85,6 +85,8 @@ namespace YanAlves.yNote.Presentation.WebMVC.Controllers
         // GET: Tarefas/Edit/5
         public ActionResult Edit(Guid id)
         {
+            ViewBag.TodasAsTags = this._tagAppService.ObterTodos();
+            ViewBag.CategoriaId = new SelectList(this._categoriaAppService.ObterTodos(), "CategoriaId", "Titulo");
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -110,6 +112,8 @@ namespace YanAlves.yNote.Presentation.WebMVC.Controllers
                 _tarefaAppService.Alterar(model);
                 return RedirectToAction("Index");
             }
+            ViewBag.TodasAsTags = this._tagAppService.ObterTodos();
+            ViewBag.CategoriaId = new SelectList(this._categoriaAppService.ObterTodos(), "CategoriaId", "Titulo");
             return View(model);
         }
 

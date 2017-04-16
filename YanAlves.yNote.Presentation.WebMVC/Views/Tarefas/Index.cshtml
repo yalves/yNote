@@ -41,7 +41,7 @@
             @Html.DisplayFor(modelItem => item.Conteudo)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.UsuarioId)
+            @Html.ActionLink(item.UsuarioId, "Details", "Usuarios", new { id = item.UsuarioId }, null)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.DataDeCriacao)
@@ -50,12 +50,12 @@
             @Html.DisplayFor(modelItem => item.Prazo)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.CategoriaId)
+            @Html.ActionLink(item.CategoriaId.ToString(), "Details", "Categorias", new { id = item.CategoriaId }, null)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.TarefaId }) |
             @Html.ActionLink("Details", "Details", new { id=item.TarefaId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.TarefaId })
+            @*@Html.ActionLink("Delete", "Delete", new { id=item.TarefaId })*@
         </td>
     </tr>
 }

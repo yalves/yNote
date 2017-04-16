@@ -18,5 +18,10 @@ namespace YanAlves.yNote.Domain.Services
         {
             this._tarefaRepository = tarefaRepository;
         }
+
+        public IEnumerable<Tarefa> ObterPorTagECategoria(Guid tagId, Guid categoriaId)
+        {
+            return this._tarefaRepository.ObterPorTagECategoria(tagId, categoriaId);
+        }
     }
 }

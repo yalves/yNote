@@ -1,14 +1,18 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Web;
-using System.Web.Mvc;
+using System.Web.Http;
 using YanAlves.yNote.Application.Interfaces;
+using YanAlves.yNote.Domain.Entities;
 
 namespace YanAlves.yNote.Services.WebAPI.Controllers
 {
-    [Route("v1/Tarefas")]
-    public class TarefasController : Controller
+    [RoutePrefix("v1/Tarefas")]
+    public class TarefasController : ApiController
     {
         private readonly ITarefaAppService _tarefaAppService;
         public TarefasController(ITarefaAppService tarefaAppService)
@@ -16,11 +20,24 @@ namespace YanAlves.yNote.Services.WebAPI.Controllers
             this._tarefaAppService = tarefaAppService;
         }
 
-        // GET: Tarefas
-        [Route("ObterTarefas")]
-        public ActionResult ObterTarefas(Guid tagId, Guid categoriaId)
+        [HttpGet]
+        [Route("ObterTarefasFiltradas")]
+        public HttpResponseMessage ObterTarefasFiltradas(Guid tagId, Guid categoriaId)
         {
-            return View();
+            var statusCode = HttpStatusCode.OK;
+            var tarefas = Mapper.Map<ICollection<Tarefa>>(this._tarefaAppService.ObterPorTagECategoria(tagId, categoriaId));
+
+            return Request.CreateResponse(statusCode, tarefas);
+        }
+
+        [HttpGet]
+        [Route("ObterTarefas")]
+        public HttpResponseMessage ObterTarefas()
+        {
+            var statusCode = HttpStatusCode.OK;
+            var tarefas = Mapper.Map<ICollection<Tarefa>>(this._tarefaAppService.ObterTodos());
+
+            return Request.CreateResponse(statusCode, tarefas);
         }
     }
 }
