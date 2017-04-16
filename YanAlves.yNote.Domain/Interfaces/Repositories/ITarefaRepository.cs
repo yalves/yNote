@@ -7,6 +7,6 @@ namespace YanAlves.yNote.Domain.Interfaces.Repositories
 {
     public interface ITarefaRepository : IRepositoryBase<Tarefa>
     {
-        IEnumerable<Tarefa> ObterPorTagECategoria(Guid tagId, Guid categoriaId);
+        IEnumerable<Tarefa> ObterPorTagECategoria(Guid? tagId, Guid? categoriaId);
     }
 }

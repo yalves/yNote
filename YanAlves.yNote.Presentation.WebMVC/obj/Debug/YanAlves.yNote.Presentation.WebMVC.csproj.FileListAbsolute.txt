@@ -1,4 +1,3 @@
-C:\Code\yNote\YanAlves.yNote.Presentation.WebMVC\obj\Debug\YanAlves.yNote.Presentation.WebMVC.csprojResolveAssemblyReference.cache
 C:\Code\yNote\YanAlves.yNote.Presentation.WebMVC\bin\YanAlves.yNote.Presentation.WebMVC.dll.config
 C:\Code\yNote\YanAlves.yNote.Presentation.WebMVC\bin\YanAlves.yNote.Presentation.WebMVC.dll
 C:\Code\yNote\YanAlves.yNote.Presentation.WebMVC\bin\YanAlves.yNote.Presentation.WebMVC.pdb
@@ -77,5 +76,6 @@ C:\Code\yNote\YanAlves.yNote.Presentation.WebMVC\bin\Microsoft.AI.Web.xml
 C:\Code\yNote\YanAlves.yNote.Presentation.WebMVC\bin\AutoMapper.xml
 C:\Code\yNote\YanAlves.yNote.Presentation.WebMVC\bin\YanAlves.yNote.Infra.Data.pdb
 C:\Code\yNote\YanAlves.yNote.Presentation.WebMVC\bin\YanAlves.yNote.Infra.Data.dll.config
+C:\Code\yNote\YanAlves.yNote.Presentation.WebMVC\obj\Debug\YanAlves.yNote.Presentation.WebMVC.csprojResolveAssemblyReference.cache
 C:\Code\yNote\YanAlves.yNote.Presentation.WebMVC\obj\Debug\YanAlves.yNote.Presentation.WebMVC.dll
 C:\Code\yNote\YanAlves.yNote.Presentation.WebMVC\obj\Debug\YanAlves.yNote.Presentation.WebMVC.pdb

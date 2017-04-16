@@ -22,7 +22,7 @@ namespace YanAlves.yNote.Services.WebAPI.Controllers
 
         [HttpGet]
         [Route("ObterTarefasFiltradas")]
-        public HttpResponseMessage ObterTarefasFiltradas(Guid tagId, Guid categoriaId)
+        public HttpResponseMessage ObterTarefasFiltradas(Guid? tagId = null, Guid? categoriaId = null)
         {
             var statusCode = HttpStatusCode.OK;
             var tarefas = Mapper.Map<ICollection<Tarefa>>(this._tarefaAppService.ObterPorTagECategoria(tagId, categoriaId));

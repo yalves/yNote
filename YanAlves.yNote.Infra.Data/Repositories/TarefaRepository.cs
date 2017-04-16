@@ -49,9 +49,26 @@ namespace YanAlves.yNote.Infra.Data.Repositories
             _context.SaveChanges();
         }
 
-        public IEnumerable<Tarefa> ObterPorTagECategoria(Guid tagId, Guid categoriaId)
+        public IEnumerable<Tarefa> ObterPorTagECategoria(Guid? tagId, Guid? categoriaId)
         {
-            return this._context.Tarefas.Where(x => x.Tags.Where(t => t.TagId == tagId).Any() && x.Categoria.CategoriaId == categoriaId);
+            List<Tarefa> tarefas = new List<Tarefa>();
+
+            if (tagId != null)
+            {
+                tarefas.AddRange(this._context.Tarefas.Where(x => x.Tags.Where(t => t.TagId == tagId).Any()));
+            }
+
+            if (categoriaId != null)
+            {
+                tarefas.AddRange(this._context.Tarefas.Where(x => x.Categoria.CategoriaId == categoriaId));
+            }
+
+            foreach (Tarefa tarefa in tarefas)
+            {
+                this._context.Entry(tarefa).Collection(t => t.Tags).Load();
+            }
+
+            return tarefas.Distinct();
         }
 
         public override IEnumerable<Tarefa> ObterTodos()

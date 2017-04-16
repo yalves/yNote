@@ -1,4 +1,3 @@
-C:\Code\yNote\YanAlves.yNote.Infra.CrossCutting.IoC\obj\Debug\YanAlves.yNote.Infra.CrossCutting.IoC.csprojResolveAssemblyReference.cache
 C:\Code\yNote\YanAlves.yNote.Infra.CrossCutting.IoC\bin\Debug\YanAlves.yNote.Infra.CrossCutting.IoC.dll.config
 C:\Code\yNote\YanAlves.yNote.Infra.CrossCutting.IoC\bin\Debug\YanAlves.yNote.Infra.CrossCutting.IoC.dll
 C:\Code\yNote\YanAlves.yNote.Infra.CrossCutting.IoC\bin\Debug\YanAlves.yNote.Infra.CrossCutting.IoC.pdb
@@ -50,5 +49,6 @@ C:\Code\yNote\YanAlves.yNote.Infra.CrossCutting.IoC\bin\Debug\System.Web.Razor.x
 C:\Code\yNote\YanAlves.yNote.Infra.CrossCutting.IoC\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Code\yNote\YanAlves.yNote.Infra.CrossCutting.IoC\bin\Debug\System.Web.WebPages.xml
 C:\Code\yNote\YanAlves.yNote.Infra.CrossCutting.IoC\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Code\yNote\YanAlves.yNote.Infra.CrossCutting.IoC\obj\Debug\YanAlves.yNote.Infra.CrossCutting.IoC.csprojResolveAssemblyReference.cache
 C:\Code\yNote\YanAlves.yNote.Infra.CrossCutting.IoC\obj\Debug\YanAlves.yNote.Infra.CrossCutting.IoC.dll
 C:\Code\yNote\YanAlves.yNote.Infra.CrossCutting.IoC\obj\Debug\YanAlves.yNote.Infra.CrossCutting.IoC.pdb

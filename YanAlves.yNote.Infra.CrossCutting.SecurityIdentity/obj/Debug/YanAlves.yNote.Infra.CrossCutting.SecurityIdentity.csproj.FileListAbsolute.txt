@@ -1,6 +1,3 @@
-C:\Code\yNote\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity\obj\Debug\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity.csprojResolveAssemblyReference.cache
-C:\Code\yNote\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity\obj\Debug\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity.Migrations.CompleteDb.resources
-C:\Code\yNote\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity\obj\Debug\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity.csproj.GenerateResource.Cache
 C:\Code\yNote\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity\bin\Debug\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity.dll.config
 C:\Code\yNote\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity\bin\Debug\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity.dll
 C:\Code\yNote\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity\bin\Debug\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity.pdb
@@ -38,5 +35,8 @@ C:\Code\yNote\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity\bin\Debug\Syste
 C:\Code\yNote\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity\bin\Debug\System.Web.WebPages.xml
 C:\Code\yNote\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Code\yNote\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Code\yNote\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity\obj\Debug\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity.csprojResolveAssemblyReference.cache
+C:\Code\yNote\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity\obj\Debug\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity.Migrations.CompleteDb.resources
+C:\Code\yNote\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity\obj\Debug\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity.csproj.GenerateResource.Cache
 C:\Code\yNote\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity\obj\Debug\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity.dll
 C:\Code\yNote\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity\obj\Debug\YanAlves.yNote.Infra.CrossCutting.SecurityIdentity.pdb

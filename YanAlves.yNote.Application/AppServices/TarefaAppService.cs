@@ -82,8 +82,9 @@ namespace YanAlves.yNote.Application.AppServices
             this._tarefaService.Remover(Tarefa);
         }
 
-        public IEnumerable<TarefaViewModel> ObterPorTagECategoria(Guid tagId, Guid categoriaId)
+        public IEnumerable<TarefaViewModel> ObterPorTagECategoria(Guid? tagId, Guid? categoriaId)
         {
+            var listaDeTarefas = new List<Tarefa>();
             return Mapper.Map<IEnumerable<TarefaViewModel>>(this._tarefaService.ObterPorTagECategoria(tagId, categoriaId));
         }
 
