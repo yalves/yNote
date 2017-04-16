@@ -21,7 +21,8 @@ namespace YanAlves.yNote.Infra.Data.Mappings
                 .HasMaxLength(256);
 
             Property(u => u.UsuarioId)
-                .IsRequired();
+                .IsRequired()
+                .HasMaxLength(128);
 
             ToTable("Categorias");
         }

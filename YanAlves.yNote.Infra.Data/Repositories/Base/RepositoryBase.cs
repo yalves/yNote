@@ -28,7 +28,7 @@ namespace YanAlves.yNote.Infra.Data.Repositories.Base
             return _dbContext.Set<TEntity>().Find(id);
         }
 
-        public void Alterar(TEntity entidade)
+        public virtual void Alterar(TEntity entidade)
         {
             if (entidade == null) throw new ArgumentNullException("Entidade é nula");
             _dbContext.Set<TEntity>().Attach(entidade);
@@ -54,7 +54,7 @@ namespace YanAlves.yNote.Infra.Data.Repositories.Base
             }
         }
 
-        public void Adicionar(TEntity entidade)
+        public virtual void Adicionar(TEntity entidade)
         {
             if (entidade == null) throw new ArgumentNullException("Entidade é nula");
             _dbContext.Set<TEntity>().Add(entidade);

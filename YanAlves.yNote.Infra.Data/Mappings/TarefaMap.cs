@@ -17,7 +17,19 @@ namespace YanAlves.yNote.Infra.Data.Mappings
                 .HasMaxLength(150);
 
             Property(u => u.UsuarioId)
-                .IsRequired();
+                .IsRequired()
+                .HasMaxLength(128);
+
+            HasMany<Tag>(s => s.Tags)
+                .WithMany(c => c.Tarefas)
+                .Map(cs =>
+                {
+                    cs.MapLeftKey("TarefaId");
+                    cs.MapRightKey("TagId");
+                    cs.ToTable("Tarefa_Tag");
+                });
+
+            //HasRequired(u => u.Usuario).WithMany(x => x.Tarefas);
 
             ToTable("Tarefas");
         }

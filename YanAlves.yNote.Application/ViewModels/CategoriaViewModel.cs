@@ -23,6 +23,6 @@ namespace YanAlves.yNote.Application.ViewModels
         [Display(Name = "Descrição")]
         public String Descricao { get; set; }
 
-        public Guid UsuarioId { get; set; }
+        public String UsuarioId { get; set; }
     }
 }

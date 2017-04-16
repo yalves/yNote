@@ -6,9 +6,11 @@ using System.Web;
 using System.Web.Mvc;
 using YanAlves.yNote.Application.Interfaces;
 using YanAlves.yNote.Application.ViewModels;
+using Microsoft.AspNet.Identity;
 
 namespace YanAlves.yNote.Presentation.WebMVC.Controllers
 {
+    [Authorize]
     public class TagsController : Controller
     {
         private readonly ITagAppService _tagAppService;
@@ -42,7 +44,12 @@ namespace YanAlves.yNote.Presentation.WebMVC.Controllers
         // GET: Tags/Create
         public ActionResult Create()
         {
-            return View();
+            TagViewModel model = new TagViewModel
+            {
+                UsuarioId = User.Identity.GetUserId()
+            };
+
+            return View(model);
         }
 
         // POST: Tags/Create

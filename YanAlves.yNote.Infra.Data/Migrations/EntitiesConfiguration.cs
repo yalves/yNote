@@ -10,6 +10,7 @@ namespace YanAlves.yNote.Infra.Data.Migrations
         public EntitiesConfiguration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(YanAlves.yNote.Infra.Data.Contexts.yNoteEntitiesDb context)

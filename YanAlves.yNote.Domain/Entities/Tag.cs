@@ -17,8 +17,10 @@ namespace YanAlves.yNote.Domain.Entities
 
         public String Titulo { get; set; }
 
-        public Usuario Usuario { get; set; }
+        //public Usuario Usuario { get; set; }
 
-        public Guid UsuarioId { get; set; }
+        public String UsuarioId { get; set; }
+
+        public ICollection<Tarefa> Tarefas { get; set; }
     }
 }

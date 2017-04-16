@@ -18,6 +18,6 @@ namespace YanAlves.yNote.Application.ViewModels
         [Display(Name = "Título")]
         public String Titulo { get; set; }
 
-        public Guid UsuarioId { get; set; }
+        public String UsuarioId { get; set; }
     }
 }

@@ -16,5 +16,22 @@ namespace YanAlves.yNote.Infra.Data.Repositories
         {
             this._context = context;
         }
+
+        //public override void Adicionar(Tarefa tarefa)
+        //{
+        //    if (tarefa == null) throw new ArgumentNullException("Entidade é nula");
+            
+        //    foreach (var tag in tarefa.Tags)
+        //    {
+        //        Tag dbTag = new Tag();
+        //        dbTag.TagId = tag.TagId;
+
+        //        _context.Tags.Attach(dbTag);
+        //        _context.Tags.Add(dbTag);
+        //    }
+
+        //    _context.Set<Tarefa>().Add(tarefa);
+        //    _context.SaveChanges();
+        //}
     }
 }

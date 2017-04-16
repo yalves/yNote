@@ -26,7 +26,7 @@ namespace YanAlves.yNote.Application.ViewModels
         [Display(Name = "Conteúdo")]
         public String Conteudo { get; set; }
 
-        public Guid UsuarioId { get; set; }
+        public String UsuarioId { get; set; }
 
         public DateTime DataDeCriacao { get; set; }
 
@@ -34,8 +34,13 @@ namespace YanAlves.yNote.Application.ViewModels
 
         public Situacao Situacao { get; set; }
 
+        [Required(ErrorMessage = "Selecione uma categoria")]
+        [Display(Name = "Categoria")]
         public Guid CategoriaId { get; set; }
 
-        public ICollection<Tag> Tags { get; set; }
+        [Required(ErrorMessage = "Escolha ao menos uma tag para a tarefa")]
+        public ICollection<Guid> TagIds { get; set; }
+
+        public ICollection<TagViewModel> Tags { get; set; }
     }
 }

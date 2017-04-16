@@ -14,17 +14,19 @@ namespace YanAlves.yNote.Application.AutoMapper
         public MappingProfiles()
         {
             CreateMap<Categoria, CategoriaViewModel>();
-            CreateMap<CategoriaViewModel, Categoria>()
-                .ForMember(p => p.Usuario, dest => dest.Ignore());
+            CreateMap<CategoriaViewModel, Categoria>();
 
-            CreateMap<Tarefa, TarefaViewModel>();
+            CreateMap<Tarefa, TarefaViewModel>()
+                .ForMember(p => p.TagIds, dest => dest.MapFrom(x => x.Tags.Select(t => t.TagId).ToList()));
+
+
             CreateMap<TarefaViewModel, Tarefa>()
-                .ForMember(p => p.Usuario, dest => dest.Ignore())
-                .ForMember(p => p.Categoria, dest => dest.Ignore());
+                .ForMember(p => p.Categoria, dest => dest.Ignore())
+                .ForMember(p => p.Tags, dest => dest.MapFrom(src => src.Tags));
 
             CreateMap<Tag, TagViewModel>();
             CreateMap<TagViewModel, Tag>()
-                .ForMember(p => p.Usuario, dest => dest.Ignore());
+                .ForMember(p => p.Tarefas, dest => dest.Ignore());
         }
     }
 }

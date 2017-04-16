@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -6,16 +7,22 @@ using System.Web;
 using System.Web.Mvc;
 using YanAlves.yNote.Application.Interfaces;
 using YanAlves.yNote.Application.ViewModels;
+using YanAlves.yNote.Domain.Entities;
 
 namespace YanAlves.yNote.Presentation.WebMVC.Controllers
 {
+    [Authorize]
     public class TarefasController : Controller
     {
         private readonly ITarefaAppService _tarefaAppService;
+        private readonly ITagAppService _tagAppService;
+        private readonly ICategoriaAppService _categoriaAppService;
 
-        public TarefasController(ITarefaAppService TarefaAppService)
+        public TarefasController(ITarefaAppService TarefaAppService, ITagAppService tagAppService, ICategoriaAppService categoriaAppService)
         {
             this._tarefaAppService = TarefaAppService;
+            this._tagAppService = tagAppService;
+            this._categoriaAppService = categoriaAppService;
         }
 
         // GET: Tarefas
@@ -42,7 +49,15 @@ namespace YanAlves.yNote.Presentation.WebMVC.Controllers
         // GET: Tarefas/Create
         public ActionResult Create()
         {
-            return View();
+            ViewBag.TodasAsTags = this._tagAppService.ObterTodos();
+            ViewBag.CategoriaId = new SelectList(this._categoriaAppService.ObterTodos(), "CategoriaId", "Titulo");
+            TarefaViewModel model = new TarefaViewModel
+            {
+                UsuarioId = User.Identity.GetUserId(),
+                TagIds = new List<Guid>()
+            };
+
+            return View(model);
         }
 
         // POST: Tarefas/Create
@@ -55,10 +70,15 @@ namespace YanAlves.yNote.Presentation.WebMVC.Controllers
             if (ModelState.IsValid)
             {
                 model.TarefaId = Guid.NewGuid();
+                model.DataDeCriacao = DateTime.Today;
+                model.Situacao = Domain.Enums.Situacao.ATIVA;
+                model.UsuarioId = User.Identity.GetUserId();
                 _tarefaAppService.Adicionar(model);
                 return RedirectToAction("Index");
             }
 
+            ViewBag.CategoriaId = new SelectList(this._categoriaAppService.ObterTodos(), "CategoriaId", "Titulo");
+            ViewBag.TodasAsTags = this._tagAppService.ObterTodos();
             return View(model);
         }
 
@@ -69,6 +89,7 @@ namespace YanAlves.yNote.Presentation.WebMVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             TarefaViewModel model = _tarefaAppService.ObterPorId(id);
             if (model == null)
             {

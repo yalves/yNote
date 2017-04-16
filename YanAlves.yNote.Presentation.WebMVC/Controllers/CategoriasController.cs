@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,6 +10,7 @@ using YanAlves.yNote.Application.ViewModels;
 
 namespace YanAlves.yNote.Presentation.WebMVC.Controllers
 {
+    [Authorize]
     public class CategoriasController : Controller
     {
         private readonly ICategoriaAppService _categoriaAppService;
@@ -42,7 +44,11 @@ namespace YanAlves.yNote.Presentation.WebMVC.Controllers
         // GET: Categorias/Create
         public ActionResult Create()
         {
-            return View();
+            CategoriaViewModel model = new CategoriaViewModel
+            {
+                UsuarioId = User.Identity.GetUserId()
+            };
+            return View(model);
         }
 
         // POST: Categorias/Create

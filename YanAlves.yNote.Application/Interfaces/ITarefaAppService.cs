@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using YanAlves.yNote.Application.ViewModels;
+using YanAlves.yNote.Domain.Entities;
 
 namespace YanAlves.yNote.Application.Interfaces
 {

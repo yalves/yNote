@@ -19,7 +19,10 @@ namespace YanAlves.yNote.Infra.Data.Mappings
                 .HasMaxLength(150);
 
             Property(u => u.UsuarioId)
-                .IsRequired();
+                .IsRequired()
+                .HasMaxLength(128);
+
+            //HasRequired(u => u.Usuario).WithMany(x => x.Tags);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace YanAlves.yNote.Domain.Entities
 {
@@ -32,5 +33,11 @@ namespace YanAlves.yNote.Domain.Entities
         public virtual int AccessFailedCount { get; set; }
 
         public virtual string UserName { get; set; }
+
+        public ICollection<Categoria> Categorias { get; set; }
+
+        public ICollection<Tag> Tags { get; set; }
+
+        public ICollection<Tarefa> Tarefas { get; set; }
     }
 }

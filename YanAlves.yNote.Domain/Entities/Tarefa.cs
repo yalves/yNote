@@ -26,9 +26,7 @@ namespace YanAlves.yNote.Domain.Entities
 
         public Situacao Situacao { get; set; }
 
-        public virtual Usuario Usuario { get; set; }
-
-        public Guid UsuarioId { get; set; }
+        public String UsuarioId { get; set; }
 
         public virtual Categoria Categoria { get; set; }
 

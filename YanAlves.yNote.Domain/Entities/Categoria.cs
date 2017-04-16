@@ -19,8 +19,8 @@ namespace YanAlves.yNote.Domain.Entities
 
         public String Descricao { get; set; }
 
-        public virtual Usuario Usuario { get; set; }
+        //public virtual Usuario Usuario { get; set; }
 
-        public Guid UsuarioId { get; set; }
+        public String UsuarioId { get; set; }
     }
 }

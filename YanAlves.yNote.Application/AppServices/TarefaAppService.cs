@@ -14,10 +14,12 @@ namespace YanAlves.yNote.Application.AppServices
     public class TarefaAppService : ITarefaAppService
     {
         private readonly ITarefaService _tarefaService;
+        private readonly ITagService _tagService;
 
-        public TarefaAppService(ITarefaService TarefaService)
+        public TarefaAppService(ITarefaService TarefaService, ITagService tagService)
         {
             this._tarefaService = TarefaService;
+            this._tagService = tagService;
         }
 
         public IEnumerable<TarefaViewModel> ObterTodos()
@@ -32,9 +34,19 @@ namespace YanAlves.yNote.Application.AppServices
 
         public TarefaViewModel Adicionar(TarefaViewModel model)
         {
-            var Tarefa = Mapper.Map<Tarefa>(model);
+            var tarefa = Mapper.Map<Tarefa>(model);
 
-            this._tarefaService.Adicionar(Tarefa);
+            if (model.TagIds != null)
+            {
+                model.Tags = new List<TagViewModel>();
+
+                foreach (Guid tagId in model.TagIds)
+                {
+                    tarefa.Tags.Add(this._tagService.ObterPorId(tagId));
+                }
+            }
+
+            this._tarefaService.Adicionar(tarefa);
 
             return model;
         }

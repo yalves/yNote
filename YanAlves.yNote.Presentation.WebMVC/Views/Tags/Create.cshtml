@@ -11,6 +11,7 @@
 {
     @Html.AntiForgeryToken()
     
+        @Html.HiddenFor(model => model.UsuarioId)
     <div class="form-horizontal">
         <h4>TagViewModel</h4>
         <hr />
@@ -20,14 +21,6 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Titulo, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Titulo, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.UsuarioId, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.UsuarioId, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.UsuarioId, "", new { @class = "text-danger" })
             </div>
         </div>
 
