@@ -76,6 +76,10 @@
     <Compile Include="Configurations\ApplicationUserManager.cs" />
     <Compile Include="Configurations\EmailService.cs" />
     <Compile Include="Contexts\ApplicationDbContext.cs" />
+    <Compile Include="Migrations\201704160426573_CompleteDb.cs" />
+    <Compile Include="Migrations\201704160426573_CompleteDb.Designer.cs">
+      <DependentUpon>201704160426573_CompleteDb.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AddPhoneNumberViewModel.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
@@ -100,6 +104,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201704160426573_CompleteDb.resx">
+      <DependentUpon>201704160426573_CompleteDb.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

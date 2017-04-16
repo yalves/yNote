@@ -43,7 +43,7 @@
                 <select class="js-example-basic-multiple form-control" name="TagIds" multiple="multiple">
                     @foreach (var tag in ViewBag.TodasAsTags)
                     {
-                        <option value="@tag.TagId">@tag.Titulo</option>
+                        <option value="@tag.TagId" selected>@tag.Titulo</option>
                     }
                 </select>
                 <br />
