@@ -1,0 +1,75 @@
+1- Sistema de Tarefas - tipo EverNote
+
+2- Considerando a ideia do EverNote, nosso sistema de Tarefas deverá atender os seguintes requisitos:
+
+    a- deverá ter Categoria (caderno) 
+    b- cada Categoria poderá ter nenhuma ou muitas Tarefas (notas) 
+    c- uma Tarefa deverá ter uma ou muitas Tags (etiquetas)
+ 
+    Categoria deverá ter Nome (obrigatório), Descricao (opcional)
+    Tarefa deverá ter Titulo (obrigatório), Conteudo (obrigatório), DataDaCriacao (obrigatório na criação, definido pelo sistema)
+        DataDaFinalizacao, Situacao (ativa, finalizada, atrasada)
+    Tag deverá ter Nome (obrigatório)
+
+3- O Sistema deverá possuir um ambiente front-end customizado com Bootstrap (responsivo) para administração das entidades.
+
+4- O sistema deverá ser desenvolvido com DDD, com as seguintes camadas:
+    1-Presentation  (ASP.NET MVC) (faz referência ao Domain e a Infra*)
+    2-Service (Web API) (faz referência ao Domain e a Infra*)
+    4-Domain
+    5.1-Infra.Data
+    5.2.1-Infra.CrossCutting.IoC (Simple Injector)
+    5.2.2-Infra.CrossCutting.SecurityIdentity
+
+5- Deverá utilizar o Entity Framework para comunicação com o Banco de Dados SQL Server.
+
+--------------------------------------------
+
+6- Criar um segundo web site no Azure para consumir informações do Sistema de Tarefas via serviço (web service). 
+   Este web site, deverá estar em uma segunda solution. Que só terá uma camada, que é a 1-Presentation 
+    
+    Este web site deverá ter uma tela que apresente duas opções: "Listar tarefas por Tag" e "Listar tarefas por Categoria" 
+    
+    Na tela para listagem por Tag, apresentar uma combobox com todas as Tags do sistema.  
+    Ao escolher uma Tag e clicar em "listar", apresentar a lista de tarefas com todos os dados
+
+    Na tela para listagem por Categoria, apresentar uma combobox com todas as Categorias do sistema.  
+    Ao escolher uma Categoria e clicar em "listar", apresentar a lista de tarefas com todos os dados
+
+    Tanto a combobox, quanto a lista resultante da busca, deverão consumir os dados via o Web Service.
+
+    Usar o jQuery AJAX para consumir os dados.
+
+--------------------------------------------
+
+7- Criar na mesma Solution do Sistema de Tarefas, os serviços (web service) para atender a solicitação do segundo web site (mencionado no item 6 acima)
+   O serviço deverá ser feito com Web API. 
+
+   ** Considerando que os serviços deverão estar em uma camada própria, então é lógico saber que você deverá ter um 
+        terceiro web site configurado no Azure para poder publicar o serviço.
+
+   ** As combobox do Sistema de Tarefas deverão ser montadas com o consumo do web service utilizando o HttpClient, conforme Etapa 5 da matéria de MVC.
+
+
+8- Presentation deverá consumir Serviço de Domain, que deverá consumir Repository da Infra. O Uso de Interface e Container de IoC (Simple Injector) é necessário.
+
+=================================================
+
+Documentação
+
+9- Apresentar o Diagrma de Classe
+
+10- Apresentar os Diagramas de Caso de Uso (não precisa da descrição), um para cada projeto.
+
+11- Apresentar uma lista de Requisitos por projeto.
+
+12- Apresentar o Diagrama de Estado para Tarefa.
+
+=================================================
+
+13- Publicar o Azure -> Todos os Web Site (Web APP -> conforme nomeclatura do Azure).
+    a- Web site para o Sistema de Tarefas  (ASP.NET MVC)
+    b- Web site para o Web Service (ASP.NET Web API)
+    c- Web site para o Cliente (ASP.NET MVC)
+
+    d- Um Banco de Dados SQL que será acessado pelo Sistema de Tarefas e pelo Web Service.

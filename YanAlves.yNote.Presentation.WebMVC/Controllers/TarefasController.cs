@@ -137,8 +137,7 @@ namespace YanAlves.yNote.Presentation.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(Guid id)
         {
-            TarefaViewModel model = _tarefaAppService.ObterPorId(id);
-            _tarefaAppService.Remover(model);
+            _tarefaAppService.Remover(id);
             return RedirectToAction("Index");
         }
     }

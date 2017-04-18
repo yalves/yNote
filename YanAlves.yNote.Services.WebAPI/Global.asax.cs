@@ -35,6 +35,8 @@ namespace YanAlves.yNote.Services.WebAPI
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AutoMapperConfiguration.RegistrarMapeamentos();
+            GlobalConfiguration.Configuration.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
+
 
             var container = new Container();
             container.Options.DefaultScopedLifestyle = new AsyncScopedLifestyle();

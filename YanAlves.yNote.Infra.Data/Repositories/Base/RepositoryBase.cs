@@ -35,14 +35,14 @@ namespace YanAlves.yNote.Infra.Data.Repositories.Base
             _dbContext.SaveChanges();
         }
 
-        public void Remover(TEntity entidade)
+        public virtual void Remover(TEntity entidade)
         {
             _dbContext.Set<TEntity>().Attach(entidade);
             _dbContext.Set<TEntity>().Remove(entidade);
             _dbContext.SaveChanges();
         }
 
-        public void Remover(Guid id)
+        public virtual void Remover(Guid id)
         {
             TEntity entity = _dbContext.Set<TEntity>().Find(id);
             if (entity != null)

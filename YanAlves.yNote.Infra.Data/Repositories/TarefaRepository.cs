@@ -27,6 +27,17 @@ namespace YanAlves.yNote.Infra.Data.Repositories
             return tarefa;
         }
 
+        public override void Remover(Guid Id)
+        {
+            this.Remover(this.ObterPorId(Id));
+        }
+
+        public override void Remover(Tarefa tarefa)
+        {
+            tarefa.Tags.Clear();
+            base.Remover(tarefa);
+        }
+
         public override void Alterar(Tarefa tarefa)
         {
             var tarefaRecuperada = _context.Tarefas.Where(x => x.TarefaId == tarefa.TarefaId).FirstOrDefault();
@@ -53,15 +64,7 @@ namespace YanAlves.yNote.Infra.Data.Repositories
         {
             List<Tarefa> tarefas = new List<Tarefa>();
 
-            if (tagId != null)
-            {
-                tarefas.AddRange(this._context.Tarefas.Where(x => x.Tags.Where(t => t.TagId == tagId).Any()));
-            }
-
-            if (categoriaId != null)
-            {
-                tarefas.AddRange(this._context.Tarefas.Where(x => x.Categoria.CategoriaId == categoriaId));
-            }
+            tarefas.AddRange(this._context.Tarefas.Where(x => x.Tags.Where(t => t.TagId == tagId).Any() && x.CategoriaId == categoriaId));
 
             foreach (Tarefa tarefa in tarefas)
             {
